@@ -2,7 +2,7 @@
 
 bin/*
 build/*
-#tools/*
+tools/*
 
 # visual studio
 .vs/
