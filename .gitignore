@@ -1,0 +1,10 @@
+﻿# Directorios
+
+bin/*
+build/*
+#tools/*
+
+# visual studio
+.vs/
+*.user
+#*.bat

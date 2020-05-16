@@ -1,0 +1,14 @@
+Language : Cpp 
+BasedOnStyle : Google 
+KeepEmptyLinesAtTheStartOfBlocks    : true 
+TabWidth : 2 
+IndentWidth : 2 
+UseTab : ForIndentation 
+AccessModifierOffset : -2 
+AllowShortFunctionsOnASingleLine : InlineOnly 
+AllowShortIfStatementsOnASingleLine : true
+AllowShortCaseLabelsOnASingleLine: true
+DerivePointerAlignment : false
+PointerAlignment : Left
+#IncludeBlocks: Preserve
+SortIncludes: false
