@@ -7,4 +7,4 @@ tools/*
 # visual studio
 .vs/
 *.user
-#*.bat
+*.bat
