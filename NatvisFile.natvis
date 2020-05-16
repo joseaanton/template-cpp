@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+  <!-- Creado para ver u8string -->
+  <Type Name="std::basic_string&lt;*&gt;">
+    <DisplayString Condition="strcmp(&quot;$T1&quot;,&quot;char8_t&quot;)==0">
+      u8{_Mypair._Myval2._Bx._Alias,s8}
+    </DisplayString>
+    <StringView>_Mypair._Myval2._Bx._Alias,s8</StringView>
+    <Expand>
+      <Item Name="[size]" >_Mypair._Myval2._Mysize</Item>
+      <Item Name="[capacity]" >_Mypair._Myval2._Myres</Item>
+      <Item Name="[allocator]" >_Mypair</Item>
+      <ArrayItems>
+        <Size>_Mypair._Myval2._Mysize</Size>
+        <ValuePointer>_Mypair._Myval2._Bx._Alias</ValuePointer>
+      </ArrayItems>
+    </Expand>
+
+  </Type>
+
+  <!-- These types are from the span header. -->
+  <!-- This is for dynamic_extent spans. -->
+  <Type Name="gsl::span&lt;*, -1&gt;">
+    <DisplayString>{{ extent = {storage_.size_} }}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>storage_.size_</Size>
+        <ValuePointer>storage_.data_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <!-- This works for constexpr size spans. -->
+  <Type Name="gsl::span&lt;*, *&gt;">
+    <DisplayString>{{ extent = {extent} }}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>extent</Size>
+        <ValuePointer>storage_.data_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+  
+  
+  
+
+</AutoVisualizer>
