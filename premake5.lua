@@ -24,7 +24,10 @@ project "main"
 
 	files {
 		"src/**.h",
-		"src/**.cpp"
+		"src/**.cpp",
+		"**.natvis",
+		".clang-format",
+		".clang-tidy"
 	}
 
 	--pchheader "pch.h"
@@ -49,7 +52,7 @@ project "main"
         symbols "On" -- note
 		runtime "Release"
 
--- añade EnableClangTidyCodeAnalysis
+-- aÃ±ade EnableClangTidyCodeAnalysis
 require('vstudio')
 
 local function EnableClangTidyCodeAnalysis(prj)
