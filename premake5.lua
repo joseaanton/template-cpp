@@ -25,7 +25,6 @@ project "main"
 	files {
 		"src/**.h",
 		"src/**.cpp",
-		"**.natvis",
 		".clang-format",
 		".clang-tidy"
 	}
